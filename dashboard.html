@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Welcome {{user.username}}</h2>
+
+<div class="card p-3 mt-3">
+
+<h4>Balance : ₹ {{account.balance}}</h4>
+
+</div>
+
+<div class="mt-4">
+
+<a class="btn btn-success" href="/deposit">Deposit</a>
+
+<a class="btn btn-danger" href="/withdraw">Withdraw</a>
+
+<a class="btn btn-primary" href="/transfer">Transfer</a>
+
+<a class="btn btn-dark" href="/transactions">Transactions</a>
+
+</div>
+
+{% endblock %}

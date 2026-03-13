@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Transfer Money</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<input class="form-control" type="text" name="account" placeholder="Receiver Account Number">
+
+<br>
+
+<input class="form-control" type="number" name="amount" placeholder="Enter Amount">
+
+<br>
+
+<button class="btn btn-primary">Send Money</button>
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="account" placeholder="Receiver username" required>
+
+    <input type="number" name="amount" placeholder="Enter amount" required>
+
+    <button type="submit">Transfer</button>
+
+</form>
+
+</form>
+
+{% endblock %}
